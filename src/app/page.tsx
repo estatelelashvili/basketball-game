@@ -106,7 +106,7 @@ interface ScoreEntry {
   timestamp?: string;
 }
 
-const Leaderboard = ({ db, appId }: LeaderboardProps) => {
+export const Leaderboard = ({ db, appId }: LeaderboardProps) => {
   const [highScores, setHighScores] = useState<ScoreEntry[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -176,7 +176,7 @@ interface BasketballCanvasProps {
   appId: string;
 }
 
-const BasketballCanvas: React.FC<BasketballCanvasProps> = ({
+export const BasketballCanvas: React.FC<BasketballCanvasProps> = ({
   db,
   userId,
   isAuthReady,
